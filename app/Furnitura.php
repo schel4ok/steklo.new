@@ -11,5 +11,6 @@ class Furnitura extends Model {
 
 	protected $table = 'furnitura';
     
-
+    public function category()
+    {  return $this->belongsTo('App\Category'); }
 }

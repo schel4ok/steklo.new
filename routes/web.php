@@ -1,18 +1,15 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| This file is where you may define all of the routes that are handled
-| by your application. Just tell Laravel the URIs it should respond
-| to using a Closure or controller method. Build something great!
-|
-*/
-Route::auth();
+/*   Auth Routes (Login, Logout, Register, Forget password)   */
+Auth::routes();
+
+/*   Admin section   */
+Route::get('/schel4ok', 'AdminController@index');
+Route::get('/registered', 'AdminController@registered');
+
+/*   Homepage   */
+Route::get('/', function () {   return view('home');   });
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/*   Contacts   */
+Route::get('/contacts', function () {   return view('contacts');   });

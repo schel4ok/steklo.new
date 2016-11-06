@@ -1,0 +1,36 @@
+// panels
+
+
+.preimuschestva, .lastworks, .popular, .lastnews {
+	@extend .panel-primary;
+	margin-bottom: 20px;
+
+	> .panel-heading {
+		  border-bottom: 2px solid $blue; 
+		  background-color: inherit!important;
+
+		  .panel-title   {color: $text-color;
+		  	a {color: $link-color;}
+		  }
+		  h3.panel-title   {font-size: $font-size-h4;}
+		}
+}
+
+.preimuschestva {
+	> .panel-body { padding: 15px 0px; }
+}
+
+.lastworks {
+	
+	> .panel-body { padding: 0px; }
+}
+
+.lastworks, .popular, .lastnews { 
+	> .panel-heading { box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); }
+	> .panel-body 	 { box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); }
+}
+
+
+.preimuschestva { @extend .col-md-8; }
+.lastworks { @extend .col-md-8; }
+.popular, .lastnews { @extend .col-md-4;}

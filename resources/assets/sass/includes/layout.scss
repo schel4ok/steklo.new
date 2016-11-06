@@ -1,0 +1,59 @@
+body > .panel {max-width:1050px; margin: 0px auto 10px auto;}
+
+header.layout-header  {  
+  background:url("/img/header.jpg") no-repeat $white;
+  padding-top: 0;
+  border-bottom: 0;
+  @media (max-width: $screen-xs-max) {
+    background:url("/img/header-small.jpg") no-repeat $white;
+    padding-top: 34px;
+    }
+  }
+
+.callback {
+  clear: both;
+  font-style: italic;
+  font-size: 2em;
+  color: $link-color;
+  line-height: 1.5em;
+  margin-top: 40px;
+  @media (max-width: $screen-xs-max) { font-size: 1.7em; }
+  @media (min-width: $screen-sm) {
+    // ссылка на главную страницу в районе логотипа
+    .root {display:inherit; width: 330px; height: 50px;} 
+    }
+
+
+}
+
+
+content { text-align: justify; padding: 0px 15px; }
+
+
+
+
+.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  // выравнивание вдоль главной оси, чтобы крайние элементы были по краям
+}
+
+
+.flexitem {
+  display: flex;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  flex-direction: column; // теперь главная ось направлена сверху вниз
+  flex-wrap: wrap; // перенос осуществляется по направлению кросс оси, сверху вниз
+  justify-content: space-between; // выравнивание элементов вдоль главной оси
+  align-items: center; // выравнивание элементов вдоль кросс оси
+  // align-content: center; // выравнивание целых строк относительно гибкого контейнера. 
+                         // Оно не будет давать эффекта если гибкие элементы занимают одну строку.
+}
+
+

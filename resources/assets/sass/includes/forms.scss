@@ -1,0 +1,8 @@
+
+
+.form-group {}
+
+.control-label { @extend .col-md-4}
+.form-control  { @extend .col-md-8; width: unset;}
+
+.input {}

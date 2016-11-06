@@ -1,0 +1,150 @@
+.center {text-align: center;text-align: -webkit-center;}
+.text-error {color: #b94a48;}
+
+
+
+
+blockquote.homepage {border-left: 2px solid #eee; font-size: $font-size-base; line-height: $line-height-base;}
+blockquote:hover {border-color:  $brand-primary;}
+
+
+
+// стили статей в разделе стекло
+article.steklo {
+	img {padding: 0px; 
+		@media (min-width: $screen-sm) {padding-right: 15px;} 
+	}
+
+}
+
+// стили картинок в тексте раздела стекло
+// padding: top, right, bottom left
+
+article a.thumb {
+	position: relative;
+	@extend .img-responsive;
+	&.right {@extend .pull-right;}
+	&.left  {@extend .pull-left;}
+	padding: 0px;
+	> img { padding: 0px; @extend .img-responsive; }
+	> span.imgalt {
+		display: block;
+		color: $white;
+		font-weight: normal;
+		position: absolute;
+		z-index: 20;
+		background: rgba(0, 0, 0, 0.4);
+		overflow: hidden;
+		padding: 10px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+
+	@media (max-width: $screen-xs) {
+		padding: 5px 0; 
+		> span.imgalt {margin: 5px 0;} 		   
+	}
+
+	@media (min-width: $screen-xs) and (max-width: $screen-sm) {
+		padding: 5px 0; 
+		> span.imgalt {margin: 5px 0;} 		   
+	}
+
+	@media (min-width: $screen-sm) {
+		&.right {padding: 0 0 0 15px; > span.imgalt {margin: 0 0 0 15px;} }
+		&.left  {padding: 0 25px 0 0; > span.imgalt {margin: 0 25px 0 0;}
+		// тут чуть больше, чтобы  маркеры списка не залезали на картинку
+			} 
+	}
+
+	@media (min-width: $screen-xs) {
+		&.right.vert {padding-left: 15px;  > span.imgalt {margin-left: 15px;}   }
+		&.left.vert  {padding-right: 15px;  > span.imgalt {margin-right: 15px;}   }
+		&.vert  { img {width: 300px;} }
+	}
+
+}
+
+
+// фотогалерея в тексте статьи
+// padding: top, right, bottom left
+.page-gallery a > img {width: 100%;}
+
+@media (max-width: $screen-sm) {
+  .page-gallery a {padding: 5px 0px;
+  				   > img {}
+  				   > span.imgalt {margin: 5px 0px;} 
+  				  }
+  }
+
+@media (min-width: $screen-sm) and (max-width: $screen-md) {
+  .page-gallery a > img {height: 342px!important;}
+  .page-gallery a:nth-child(even){padding: 5px 0 5px 5px; > span.imgalt {margin: 5px 0 5px 5px;} } // Каждый четный : nth-child(even)
+  .page-gallery a:nth-child(odd) {padding: 5px 5px 5px 0; > span.imgalt {margin: 5px 5px 5px 0;} }  // Каждый нечетный : nth-child(odd)
+  }
+
+@media (min-width: $screen-md) and (max-width: $screen-lg) {
+  .page-gallery a > img {height: 258px!important;}
+  .page-gallery a:nth-child(3n+3) {padding: 5px 0 5px 5px; > span.imgalt {margin: 5px 0 5px 5px;}}
+  .page-gallery a:nth-child(3n+2) {padding: 5px 2.5px; > span.imgalt {margin: 5px 2.5px;}}
+  .page-gallery a:nth-child(3n+1) {padding: 5px 5px 5px 0; > span.imgalt {margin: 5px 5px 5px 0;}}
+  }
+
+@media (min-width: $screen-lg) {
+  .page-gallery a > img {height: 195px!important;}
+  .page-gallery a:nth-child(4n+4) {padding: 5px 0 5px 5px; > span.imgalt {margin: 5px 0 5px 5px;}} // каждый 4 элемент
+  .page-gallery a:nth-child(4n+2), .page-gallery a:nth-child(4n+3) {padding: 5px 2.5px; > span.imgalt {margin: 5px 2.5px;}}
+  .page-gallery a:nth-child(4n+1) {padding: 5px 5px 5px 0; > span.imgalt {margin: 5px 5px 5px 0;}} // каждый 1 элемент в ряду
+  }
+
+
+
+// стили ссылок в тексте
+article a { font-weight: bold;
+	&.textthumb {   // стили текстовых ссылок на картинки, открывающиеся в лайтбоксе
+		display: inline!important;
+		text-decoration: none;
+		border-bottom: 1px dashed;
+	}
+
+}
+
+
+// стили онлайн калькуляторов
+.order > h4.title {
+	padding: 10px;
+	margin-bottom: 0px;
+	span { padding-left: 10px; }
+}
+
+// стили страницы RAL
+div.ral  {
+	@extend .clearfix;
+	div {@extend .alert; margin-bottom: 10px; padding: 5px; border: 0.2px white solid;}
+ }
+
+// стили списков   
+// список с иконками из fontawesome 
+.list-icons { list-style: none; padding: 0; display:table;
+   > li {display:table-row;}
+   > li > i {display:table-cell; @extend .text-primary; padding-right: 1em;}
+
+   > li.panel-title > i {padding: 10px;}
+   &.calendar > li > i {display: inline; color: $text-color; padding-right: 0;}
+}
+
+
+// список с галочками
+.list-check { list-style: none; padding: 0; display:table;
+   > li {display:table-row;}
+   > li:before {content: '✔'; padding-right: 1em; display:table-cell;}
+}
+
+
+// параграф с большой первой буквой
+p.first-letter::first-letter {
+    font-size: 2em;
+    color: $blue;
+    font-weight: bold;
+}

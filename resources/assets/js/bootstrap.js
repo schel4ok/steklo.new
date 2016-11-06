@@ -26,7 +26,7 @@ require('vue-resource');
  */
 
 Vue.http.interceptors.push((request, next) => {
-    request.headers.set('X-CSRF-TOKEN', App.csrfToken);
+    request.headers.set('X-CSRF-TOKEN', MyApp.csrfToken);
 
     next();
 });

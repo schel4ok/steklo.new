@@ -17,7 +17,7 @@ Vue.component('example', require('./components/Example.vue'));
 
 const app = new Vue({
 
-    el: '.container',
+    el: '#app',
 
     data: {
 	    furnitura: [],
