@@ -7,10 +7,7 @@
 [![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
 
-## Делаем простой поиск при помощи Laravel Scout и Vue.js
-[Laravel Scout и Vue.js search RUS](https://laravel-news.ru/blog/tutorials/build-search-functionality-with-laravel-scout-and-vue-js)  
-[Laravel Scout and Vue.js search ENG](https://scotch.io/tutorials/build-search-functionality-with-laravel-scout-and-vue-js)  
-После клонирования репозитория надо обязательно сделать следующие операции:
+## После клонирования репозитория надо обязательно сделать следующие операции:
 ```
 composer install
 npm install
@@ -19,6 +16,11 @@ php artisan scout:import "App\Furnitura"
 1. Установка всех зависимостей проекта (всех доп пакетов)
 2. Установка npm для работы gulp.
 3. Экспорт в Algolia всех поисковых данных (это скорее всего необязательный шаг, т.к. данные на сервер Algolia уже загружены).
+
+
+## Делаем простой поиск при помощи Laravel Scout и Vue.js
+[Laravel Scout и Vue.js search RUS](https://laravel-news.ru/blog/tutorials/build-search-functionality-with-laravel-scout-and-vue-js)  
+[Laravel Scout and Vue.js search ENG](https://scotch.io/tutorials/build-search-functionality-with-laravel-scout-and-vue-js)  
 
 
 ## Авторизация и Админка 

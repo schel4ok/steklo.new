@@ -14,9 +14,16 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/search', [
-    'as' => 'api.search',
+    'as' => 'api.search',  // путь /api/search?q=searchword  откроет результаты поиска в формате json
     'uses' => 'Api\SearchController@search'
 ]);
+
+Route::get('/todos', [
+    'as' => 'api.todos',  // путь /api/search?q=searchword  откроет результаты поиска в формате json
+    'uses' => function() { return App\Todo::all(); }
+]);
+
+
 
 Route::get('/user', function (Request $request) {
     return $request->user();

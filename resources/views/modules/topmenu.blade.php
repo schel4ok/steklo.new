@@ -3,14 +3,14 @@
 			<a class="navbar-brand" href="/">
 		        <img alt="brand" src="/img/logo-small.png">
 		     </a>
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse-1">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse-topmenu">
 				<span class="sr-only">Toggle Navigation</span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
 		</header>
-		<div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
+		<div class="collapse navbar-collapse" id="bs-navbar-collapse-topmenu">
 
 
 			<div name="q" class="search navbar-left">

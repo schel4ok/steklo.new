@@ -7,6 +7,10 @@ Auth::routes();
 Route::get('/schel4ok', 'AdminController@index');
 Route::get('/registered', 'AdminController@registered');
 
+
+
+
+
 /*   Homepage   */
 Route::get('/', function () {   return view('home');   });
 

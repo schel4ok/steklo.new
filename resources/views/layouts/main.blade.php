@@ -21,12 +21,12 @@
 
 </head>
 <body>
-    <div id="app">
-        <div class="flex-center position-ref full-height panel panel-default">
+        <div id="app" class="flex-center position-ref full-height panel panel-default">
 
             <header class="layout-header panel-heading">
                 @include('modules.topmenu')
-
+                <callbackbutton></callbackbutton>
+                <callbackwindow :show.sync="showCallback"></callbackwindow>
 
             </header>
 
@@ -55,7 +55,7 @@
         </div>
 
         @include('modules.totop')
-
+        
         <script src="{{ elixir("js/app.js") }}"></script>
 
     </body>

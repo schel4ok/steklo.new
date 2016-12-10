@@ -4,7 +4,8 @@
  * include Vue and Vue Resource. This gives a great starting point for
  * building robust, powerful web applications using Vue and Laravel.
  */
-
+// js files can be imported without specifying extension
+// libraries
 require('./bootstrap');
 
 /**
@@ -13,20 +14,43 @@ require('./bootstrap');
  * the application, or feel free to tweak this setup for your needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
+//Vue.component('search', require('./components/search.vue'));
+
+Vue.component('callbackbutton', require('./components/callbackbutton.vue'));
+Vue.component('callbackwindow', require('./components/callbackwindow.vue'));
+Vue.component('todo', require('./components/todo.vue'));
+//Vue.component('search', require('./components/search.vue'));
+
+/*
+https://gist.github.com/TahaSh/99df18b049cbf2402c02
+http://taha-sh.com/blog/setting-up-ajax-validation-with-laravel-vuejs-in-no-time
+http://taha-sh.com/blog/how-to-create-a-reusable-modal-box-in-laravel-vuejs
+https://adamwathan.me/2016/01/04/composing-reusable-modal-dialogs-with-vuejs/
+
+*/
 
 const app = new Vue({
 
     el: '#app',
 
     data: {
+    	showCallback: false,
+
+    	// search
 	    furnitura: [],
 	    loading: false,
 	    error: false,
     	query: ''
 	},
 
+    computed: {
+
+
+    },
+
+
 	methods: {
+		// search
 	    search: function() {
 	        // Clear the error message.
 	        this.error = '';
